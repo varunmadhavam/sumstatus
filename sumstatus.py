@@ -10,7 +10,7 @@ check=2
 interval=1800
 sender = 'sum@nd1upgrade'
 receivers = ['u@c','u@c']
-message = """From: SUM ND1 <sum@nd1upgrade>
+message = """From: SUM SID <sum@sidupgrade>
 To: x y <u@c>,m  n <m@n>
 MIME-Version: 1.0
 Content-type: text/html
@@ -19,7 +19,7 @@ Subject: SUM Running on SID requires your attention
 <h1>SUM on SID Waiting For Dialog Input</h1>
 """
 def sentmail():
-	smtpObj = smtplib.SMTP('1',25)
+	smtpObj = smtplib.SMTP('1.1.1.1',25)
 	smtpObj.sendmail(sender, receivers, message)
 	print "mail sent"
 	return;
